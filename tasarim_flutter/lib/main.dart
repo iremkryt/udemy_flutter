@@ -37,12 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
             width: 80,
             height: 80,
             color: Colors.red,
+            child: const Center(
+              child: Text("Hola"),
+            ),
           ),
           Container(
             width: 50,
