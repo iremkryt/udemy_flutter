@@ -62,10 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          Container(
-            width: 80,
-            height: 80,
-            color: Colors.orange,
+          Expanded(
+            child: Container(
+              width: 80,
+              height: 80,
+              color: Colors.orange,
+            ),
           ),
         ],
       ),
