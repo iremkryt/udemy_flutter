@@ -56,19 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Hola"),
             ),
           ),
+          const Spacer(flex: 50,),
           Container(
             width: 100,
             height: 100,
             color: Colors.orange,
-          ),
-          SizedBox(
-            width: 200,
-            height: 400,
-            child: Container(
-              color: Colors.green,
-              width: 50,
-              height: 50,
-            ),
           ),
         ],
       ),
