@@ -32,46 +32,59 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    var ekranBilgisi = MediaQuery.of(context);
+    final double ekranYuksekligi = ekranBilgisi.size.height;
+    final double ekranGenisligi = ekranBilgisi.size.width;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            MaviKare(),
-            SizedBox(height: 10),
-            KirmiziKare(),
-          ],
-        ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top:ekranYuksekligi/100),
+            child: SizedBox(
+              width: ekranGenisligi/2,
+              height: ekranYuksekligi/5, 
+              child: Image.asset("assets/3683.jpg"),
+            ),
+          ),
+          Container(
+            width: ekranGenisligi/4,
+            height: ekranYuksekligi/8, 
+            color: Colors.pink,
+          ),
+          const Text("Hola",style: TextStyle(fontSize: 20.0),),
+        ],
       ),
     );
   }
 }
 
-class MaviKare extends StatelessWidget {
-  const MaviKare({super.key});
+// class MaviKare extends StatelessWidget {
+//   const MaviKare({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      color: Colors.pink,
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 50,
+//       height: 50,
+//       color: Colors.pink,
+//     );
+//   }
+// }
 
-class KirmiziKare extends StatelessWidget {
-  const KirmiziKare({super.key});
+// class KirmiziKare extends StatelessWidget {
+//   const KirmiziKare({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      color: Colors.purple,
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: 50,
+//       height: 50,
+//       color: Colors.purple,
+//     );
+//   }
+// }
