@@ -39,27 +39,32 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              width: 80,
+              height: 80,
+              color: Colors.red,
+              child: const Center(
+                child: Text("Hola"),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              width: 80,
+              height: 80,
+              color: Colors.yellow,
+              child: const Align(
+                alignment: Alignment.topLeft,
+                child: Text("Hola"),
+              ),
+            ),
+          ),
           Container(
             width: 80,
             height: 80,
-            color: Colors.red,
-            child: const Center(
-              child: Text("Hola"),
-            ),
-          ),
-          Container(
-            width: 50,
-            height: 50,
-            color: Colors.yellow,
-            child: const Align(
-              alignment: Alignment.topLeft,
-              child: Text("Hola"),
-            ),
-          ),
-          const Spacer(flex: 50,),
-          Container(
-            width: 100,
-            height: 100,
             color: Colors.orange,
           ),
         ],
