@@ -36,41 +36,42 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: 80,
-              height: 80,
-              color: Colors.red,
-              child: const Center(
-                child: Text("Hola"),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: 80,
-              height: 80,
-              color: Colors.yellow,
-              child: const Align(
-                alignment: Alignment.topLeft,
-                child: Text("Hola"),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              width: 80,
-              height: 80,
-              color: Colors.orange,
-            ),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            MaviKare(),
+            SizedBox(height: 10),
+            KirmiziKare(),
+          ],
+        ),
       ),
+    );
+  }
+}
+
+class MaviKare extends StatelessWidget {
+  const MaviKare({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      color: Colors.pink,
+    );
+  }
+}
+
+class KirmiziKare extends StatelessWidget {
+  const KirmiziKare({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      color: Colors.purple,
     );
   }
 }
