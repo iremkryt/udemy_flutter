@@ -51,6 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 50,
             height: 50,
             color: Colors.yellow,
+            child: const Align(
+              alignment: Alignment.topLeft,
+              child: Text("Hola"),
+            ),
           ),
           Container(
             width: 100,
