@@ -28,8 +28,10 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+//setState() methodu stateful kısmında çalışır
 
+class _MyHomePageState extends State<MyHomePage> {
+  int sayac = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +40,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: (() {
+                setState(() {
+                  sayac = sayac +1;
+                });
+              }), 
+              child: Text("Tıkla"),
+            ),
+            Text("Sonuc: $sayac"),
+          ],
           
         ),
       ),
