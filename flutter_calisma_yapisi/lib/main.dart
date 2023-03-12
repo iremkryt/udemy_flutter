@@ -58,3 +58,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+//stateful ve stateless widget arasındaki fark:
